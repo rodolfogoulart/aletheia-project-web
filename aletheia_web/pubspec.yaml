@@ -23,13 +23,26 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: false
+  ios: false
+  image_path: "assets/images/aletheia-icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/images/aletheia-icon.png"
+    background_color: "#ffffff"
+    theme_color: "#ffffff"
+
 
 # The following section is specific to Flutter packages.
 flutter:
   uses-material-design: true
 
-  assets:
-    - assets/images/aletheia-icon-dpi130.png
+  assets:    
+    - assets/images/aletheia-icon.png
     - assets/showcase/
 
   # An image asset can refer to one or more resolution-specific "variants", see

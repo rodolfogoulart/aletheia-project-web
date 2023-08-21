@@ -63,10 +63,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    TextStyle style = GoogleFonts.anticDidone().copyWith(fontSize: 25);
+    TextStyle style = GoogleFonts.libreFranklin().copyWith(fontSize: 25);
     // TextStyle style = GoogleFonts.cormorantUnicase().copyWith(fontSize: 25);
     var screenWidth = MediaQuery.of(context).size.width;
-    var screenHeight = MediaQuery.of(context).size.height;
+    // var screenHeight = MediaQuery.of(context).size.height;
     var controllerScrollPage = ScrollController();
 
     ValueNotifier turnRow = ValueNotifier(false);
@@ -79,6 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
 
     var urlDownload = 'https://github.com/rodolfogoulart/aletheia-core-model/releases';
+    bool isMobile = screenWidth < 400;
+    double titleSize = 72;
+    if (isMobile) {
+      titleSize /= 2;
+      style = style.copyWith(fontSize: 16);
+    }
 
     //
     return CustomGradientBackground(
@@ -96,77 +102,80 @@ class _MyHomePageState extends State<MyHomePage> {
                   builder: (context, value, child) {
                     Widget text = Padding(
                       padding: const EdgeInsets.fromLTRB(8, 8, 25, 8),
-                      child: RepaintBoundary(
-                        child: SizedBox(
-                          height: 72 + 8,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Builder(builder: (context) {
-                                ValueNotifier textProject = ValueNotifier('Aletheia');
-                                return MouseRegion(
-                                  onEnter: (event) {
-                                    textProject.value = 'ἀλήθεια'.capitalize;
-                                  },
-                                  onExit: (event) {
-                                    textProject.value = 'Aletheia';
-                                  },
-                                  child: ValueListenableBuilder(
-                                      valueListenable: textProject,
-                                      builder: (context, value, child) {
-                                        return SizedBox(
-                                          width: 8 * (72 * .5),
-                                          child: Text(
-                                            textProject.value,
-                                            style: GoogleFonts.cormorantUnicase().copyWith(
-                                              color: Colors.white,
-                                              fontSize: 72,
-                                              fontWeight: FontWeight.bold,
+                      child: FittedBox(
+                        child: RepaintBoundary(
+                          child: SizedBox(
+                            height: titleSize + 8,
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Builder(builder: (context) {
+                                  ValueNotifier textProject = ValueNotifier('Aletheia');
+                                  return MouseRegion(
+                                    onEnter: (event) {
+                                      textProject.value = 'ἀλήθεια'.capitalize;
+                                    },
+                                    onExit: (event) {
+                                      textProject.value = 'Aletheia';
+                                    },
+                                    child: ValueListenableBuilder(
+                                        valueListenable: textProject,
+                                        builder: (context, value, child) {
+                                          return SizedBox(
+                                            width: 8 * (titleSize * .5),
+                                            child: Text(
+                                              textProject.value,
+                                              style: GoogleFonts.cormorantUnicase().copyWith(
+                                                color: Colors.white,
+                                                fontSize: titleSize,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
-                                          ),
-                                        );
-                                      }),
-                                );
-                              }),
-                              Text(
-                                ' Project',
-                                style: GoogleFonts.cormorantUnicase().copyWith(
-                                  color: Colors.white,
-                                  fontSize: 72,
-                                  fontWeight: FontWeight.bold,
+                                          );
+                                        }),
+                                  );
+                                }),
+                                Text(
+                                  ' Project',
+                                  style: GoogleFonts.cormorantUnicase().copyWith(
+                                    color: Colors.white,
+                                    fontSize: titleSize,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     );
-                    Widget image = RepaintBoundary(
-                      child: Image.asset('assets/images/aletheia-icon-dpi130.png', fit: BoxFit.fitWidth, width: 128, height: 128)
-                          .animate(
-                            delay: 2.seconds,
-                            onComplete: (controller) {
-                              controller.repeat(period: 3.seconds);
-                            },
-                          )
-                          .shimmer(duration: 3.seconds, delay: 2.seconds),
-                    );
+                    Widget image = Image.asset('assets/images/aletheia-icon.png',
+                        fit: BoxFit.scaleDown, width: isMobile ? 42 : 128, height: isMobile ? 42 : 128);
+                    // .animate(
+                    //   delay: 2.seconds,
+                    //   onComplete: (controller) {
+                    //     controller.repeat(period: 3.seconds);
+                    //   },
+                    // )
+                    // .shimmer(duration: 3.seconds, delay: 2.seconds);
 
                     return turnRow.value
-                        ? Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0),
-                                child: image,
-                              ),
-                              text
-                            ],
-                          ).animate().fade(duration: 300.milliseconds)
+                        ? FittedBox(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child: image,
+                                ),
+                                text
+                              ],
+                            ).animate().fade(duration: 300.milliseconds),
+                          )
                         : Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -177,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(top: 25, left: 50, right: 50),
+                padding: const EdgeInsets.only(top: 25),
                 child: SingleChildScrollView(
                   controller: controllerScrollPage,
                   child: Column(
@@ -185,46 +194,51 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SelectableText.rich(
-                        TextSpan(text: 'O que é o Projeto Aletheia?\n', children: [
-                          const TextSpan(
-                              text: ' * Projeto Aletheia é um software para estudo da Bíblia de forma mais aprofundada.\n'),
-                          const TextSpan(
-                              text:
-                                  ' * O projeto tem como objetivo disponibilizar um software em diferentes plataforma para viabilizar o estudo bíblico mais aprofundado da palavra'),
-                          const TextSpan(
-                              text:
-                                  '\n\nO Projeto Aletheia se define um projeto Cristão Protestante, portanto temos como objetivo ampliar a oportunidade de que pessoas simples venham ter uma ferramenta para estudo da biblia de forma mais simples e também aprofundada.'),
-                          const TextSpan(text: '\n\nComo surgiu a idéia?\n'),
-                          const TextSpan(
-                              text:
-                                  ' * A ideia do projeto Aletheia surgiu com a necessidade de uma plataforma para estudo da bíblia mais aprofundada, no começo a idéia era somente a visualização da bíblia off-line e mostrando uma versão para comparar. Não é como se fosse nova a idéia, sendo que encontramos vários sites na internet que disponibilizam ferramentas para comparar, mas o diferencial do Aletheia é que a comparação dos textos bíblicos se dá de verso a verso e mostrando todas as outras versões disponíveis. O projeto cresceu e surgiu idéias como [Referência Bíblica], [Anotações do Verso pessoal],  [Dicionário de palavras], [Comentário bíblico], [Dicionário Léxico (Strong)]. E assim o projeto tem estado em desenvolvimento para disponibilizar em uma só plataforma o máximo de funcionalidades e também de forma simples e bem usual.'),
-                          const TextSpan(text: '\n\nOnde posso encontrar o projeto?\n'),
-                          const TextSpan(
-                              text:
-                                  ' * O Projeto se encontra em desenvolvimento, mas pode ser baixado em uma pasta publica do projeto abaixo:\n\n'),
-                          TextSpan(
-                              text: urlDownload,
-                              style: style.copyWith(
-                                color: Colors.blue.shade300,
-                                decoration: TextDecoration.underline,
-                                decorationColor: Colors.blue.shade300,
-                              ),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () async {
-                                  await _launchUrl(urlDownload);
-                                }),
-                        ]),
-                        style: style,
+                      Padding(
+                        padding: EdgeInsets.only(left: isMobile ? 10 : 25, right: isMobile ? 10 : 25),
+                        child: SelectableText.rich(
+                          TextSpan(text: 'O que é o Projeto Aletheia?\n', children: [
+                            TextSpan(text: ' * Projeto Aletheia é um software para ', children: [
+                              TextSpan(text: 'estudo da Bíblia', style: style.copyWith(fontWeight: FontWeight.bold)),
+                              const TextSpan(text: ' de forma mais aprofundada.\n')
+                            ]),
+                            const TextSpan(
+                                text:
+                                    ' * O projeto tem como objetivo disponibilizar um software em diferentes plataforma para viabilizar o estudo bíblico mais aprofundado da palavra.'),
+                            const TextSpan(
+                                text:
+                                    '\n\nO Projeto Aletheia se define Cristão Protestante, portanto temos como objetivo ampliar a oportunidade de que pessoas simples venham ter uma ferramenta para estudo da biblia de forma mais simples e também aprofundada.'),
+                            const TextSpan(text: '\n\nComo surgiu a idéia?\n'),
+                            const TextSpan(
+                                text:
+                                    ' * A ideia do projeto surgiu com a necessidade de uma plataforma para estudo da bíblia mais aprofundada, no começo a idéia era somente a visualização da bíblia off-line e mostrando uma versão para comparar. Não é como se fosse nova a idéia, sendo que encontramos vários sites na internet que disponibilizam ferramentas para comparar, mas o diferencial do Aletheia é que a comparação dos textos bíblicos se dá de verso a verso e mostrando todas as outras versões disponíveis. O projeto cresceu e surgiu idéias como [Referência Bíblica], [Anotações do Verso pessoal],  [Dicionário de palavras], [Comentário bíblico], [Dicionário Léxico (Strong)]. E assim o projeto tem estado em desenvolvimento para disponibilizar em uma só plataforma o máximo de funcionalidades e também de forma simples e bem usual.'),
+                            const TextSpan(text: '\n\nOnde posso encontrar o projeto?\n'),
+                            const TextSpan(
+                                text:
+                                    ' * O Projeto se encontra em desenvolvimento, mas pode ser baixado em uma pasta publica do projeto abaixo:\n\n'),
+                            TextSpan(
+                                text: urlDownload,
+                                style: style.copyWith(
+                                  color: Colors.blue.shade300,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.blue.shade300,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () async {
+                                    await _launchUrl(urlDownload);
+                                  }),
+                          ]),
+                          style: style,
+                        ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 50, bottom: 50, left: 80, right: 80),
+                        padding: const EdgeInsets.only(top: 50, bottom: 50),
                         child: Builder(builder: (context) {
                           var controllerScroll = ScrollController();
                           return Row(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 8.0),
+                                padding: EdgeInsets.only(right: isMobile ? 4 : 8),
                                 child: IconButton(
                                     onPressed: () async {
                                       await controllerScroll.animateTo(controllerScroll.offset - 250,
@@ -247,35 +261,55 @@ class _MyHomePageState extends State<MyHomePage> {
                                     children: [
                                       CardImages(
                                           style: style,
+                                          image: 'assets/showcase/screen0.png',
+                                          title: 'Tela principal',
+                                          subtitle: ''),
+                                      CardImages(
+                                          style: style,
                                           image: 'assets/showcase/screen1.png',
-                                          title: 'Tela inícial com Verso para comparar',
+                                          title: 'Tela com Rerso para comparar',
                                           subtitle: ''),
                                       CardImages(
                                           style: style,
                                           image: 'assets/showcase/screen2.png',
-                                          title: 'Tela inícial com Refêrencias Verso',
+                                          title: 'Tela com Refêrencias Verso',
                                           subtitle: ''),
                                       CardImages(
                                           style: style,
                                           image: 'assets/showcase/screen3.png',
-                                          title: 'Tela inícial com Anotações Verso',
+                                          title: 'Tela com Anotações Verso',
                                           subtitle: ''),
                                       CardImages(
                                           style: style,
                                           image: 'assets/showcase/screen4.png',
-                                          title: 'Tela inícial de pesquisa',
+                                          title: 'Tela com Dicionário de palavras',
                                           subtitle: ''),
                                       CardImages(
                                           style: style,
                                           image: 'assets/showcase/screen5.png',
-                                          title: 'Tela inícial de pesquisa',
+                                          title: 'Tela com Comentário Bíblico',
+                                          subtitle: ''),
+                                      CardImages(
+                                          style: style,
+                                          image: 'assets/showcase/screen6.png',
+                                          title: 'Tela Dicionário Léxico',
+                                          subtitle: 'Utilizado para exegese bíblica'),
+                                      CardImages(
+                                          style: style,
+                                          image: 'assets/showcase/screen7.png',
+                                          title: 'Pesquisa Chat-GPT Exegese bíblica',
+                                          subtitle: '(Experimental)'),
+                                      CardImages(
+                                          style: style,
+                                          image: 'assets/showcase/screen8.png',
+                                          title: 'Impressão PDF Capítulo',
                                           subtitle: ''),
                                     ],
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8.0),
+                                padding: EdgeInsets.only(left: isMobile ? 4 : 8),
                                 child: IconButton(
                                     onPressed: () async {
                                       await controllerScroll.animateTo(controllerScroll.offset + 250,
@@ -291,7 +325,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         }),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 100, bottom: 30),
+                        padding: EdgeInsets.only(top: isMobile ? 50 : 100, bottom: 30),
                         child: Builder(builder: (context) {
                           var bottomStyle = style.copyWith(fontSize: style.fontSize! - 3, color: Colors.white);
                           return SizedBox(
@@ -374,8 +408,10 @@ class CardImages extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
     var screenHeight = MediaQuery.of(context).size.height;
+    bool isMobile = screenWidth < 400;
+
     return SizedBox(
-      width: 512,
+      width: isMobile ? screenWidth * .6 : 512,
       child: Card(
         elevation: 1,
         child: Column(
@@ -386,31 +422,41 @@ class CardImages extends StatelessWidget {
                     context: context,
                     builder: (_) {
                       return AlertDialog(
-                        title: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            IconButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                icon: const Icon(
-                                  Icons.arrow_back,
-                                  size: 35,
-                                )),
-                          ],
-                        ),
+                        // title:
                         elevation: 0,
                         backgroundColor: Colors.transparent,
                         insetPadding: EdgeInsets.zero,
                         shape: const RoundedRectangleBorder(),
-                        content: SizedBox(
-                          width: screenWidth * .75,
-                          height: screenHeight * .75,
-                          child: Image.asset(
-                            image,
-                            fit: BoxFit.scaleDown,
-                          ),
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                IconButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    icon: Icon(
+                                      Icons.arrow_back,
+                                      size: isMobile ? null : 35,
+                                    )),
+                              ],
+                            ),
+                            SizedBox(
+                              width: isMobile ? screenWidth : screenWidth * .75,
+                              height: isMobile ? null : screenHeight * .75,
+                              child: Image.asset(
+                                image,
+                                fit: BoxFit.fitWidth,
+                                width: isMobile ? screenWidth : 512,
+                              ),
+                            ),
+                          ],
                         ),
                       );
                     });
