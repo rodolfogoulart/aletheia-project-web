@@ -1,7 +1,13 @@
-<h1 style="text-align: center;">I53</h1>
+<blockquote>
+<h1 style="text-align:center">I53</h1>
 
-<h3>Este &eacute; um projeto de um Mission&aacute;rio e desenvolvedor por hobby.</h3>
+<h3 style="text-align:center">Este &eacute; um projeto de um Mission&aacute;rio e desenvolvedor por hobby.</h3>
 
-<p>Meu anseio &eacute; que esta ferramenta seja uma ben&ccedil;&atilde;o em sua vida, que voc&ecirc; dia a dia venha ir mais profundo na palavra, e que a palavra de Deus venha ser falada com sabedoria e poder no Esp&iacute;rito Santo para que todos venham conhecer nosso Senhor Jesus Cristo,&nbsp;que o Ide venha ser cumprido, e que Todos os Povos venham ouvir das boas novas do Reino de Deus, ent&atilde;o finalmente encontraremos nosso Senhor.</p>
+<p style="text-align:center">Meu anseio &eacute; que esta ferramenta seja uma ben&ccedil;&atilde;o em sua vida, que voc&ecirc; dia a dia venha ir mais profundo na palavra, e que a palavra de Deus venha ser falada com sabedoria e poder no Esp&iacute;rito Santo para que todos venham conhecer nosso Senhor Jesus Cristo,&nbsp;que o Ide venha ser cumprido, e que Todos os Povos venham ouvir das boas novas do Reino de Deus, ent&atilde;o finalmente encontraremos nosso Senhor.</p>
+</blockquote>
 
-<p>Deseja saber mais ou contribuir para o projeto (financeiramente e/ou no desenvolvimento)?&nbsp;Entre em contato pelo instagram: <a href="https://www.instagram.com/rm_goulart/">rm_goulart</a>&nbsp;</p>
+<p style="text-align:center">&nbsp;</p>
+
+<h4 style="text-align:center"><em>Deseja saber mais ou contribuir para o projeto (financeiramente e/ou no desenvolvimento)?&nbsp;</em></h4>
+
+<h4 style="text-align:center"><em>Entre em contato pelo instagram: <a href="https://www.instagram.com/rm_goulart/">rm_goulart</a>&nbsp;</em></h4>
