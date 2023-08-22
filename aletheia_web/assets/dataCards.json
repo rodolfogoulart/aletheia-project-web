@@ -1,0 +1,56 @@
+[
+    {
+        "url": "assets/showcase/screen0.png",
+        "asset": true,
+        "title": "Tela principal",
+        "subtitle": ""
+    },
+    {
+        "url": "assets/showcase/screen1.png",
+        "asset": true,
+        "title": "Tela com Rerso para comparar",
+        "subtitle": ""
+    },
+    {
+        "url": "assets/showcase/screen2.png",
+        "asset": true,
+        "title": "Tela com Refêrencias Verso",
+        "subtitle": ""
+    },
+    {
+        "url": "assets/showcase/screen3.png",
+        "asset": true,
+        "title": "Tela com Anotações Verso",
+        "subtitle": ""
+    },
+    {
+        "url": "assets/showcase/screen4.png",
+        "asset": true,
+        "title": "Tela com Dicionário de palavras",
+        "subtitle": ""
+    },
+  {
+        "url": "assets/showcase/screen5.png",
+        "asset": true,
+        "title": "Tela com Comentário Bíblico",
+        "subtitle": ""
+    },
+  {
+        "url": "assets/showcase/screen6.png",
+        "asset": true,
+        "title": "Tela Dicionário Léxico",
+        "subtitle": "Utilizado para exegese bíblica"
+    },
+  {
+        "url": "assets/showcase/screen7.png",
+        "asset": true,
+        "title": "Pesquisa Chat-GPT Exegese bíblica",
+        "subtitle": "(Experimental)"
+    },
+  {
+        "url": "assets/showcase/screen8.png",
+        "asset": true,
+        "title": "Impressão PDF Capítulo",
+        "subtitle": ""
+    }
+]
