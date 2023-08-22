@@ -185,8 +185,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     // .shimmer(duration: 3.seconds, delay: 2.seconds);
 
                     return turnRow.value
-                        ? FittedBox(
-                            child: Row(
+                        ? Builder(builder: (context) {
+                            var widget = Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -197,8 +197,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                                 text
                               ],
-                            ).animate().fade(duration: 300.milliseconds),
-                          )
+                            ).animate().fade(duration: 300.milliseconds);
+                            if (isMobile) {
+                              return FittedBox(child: widget);
+                            }
+                            return widget;
+                          })
                         : Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
