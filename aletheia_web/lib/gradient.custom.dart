@@ -2,24 +2,12 @@ import 'dart:math';
 
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 List<Color> colorsDark = const [
-  // Color.fromARGB(255, 18, 1, 67),
-  // Color.fromARGB(255, 24, 13, 57),
-  // Color.fromARGB(255, 37, 30, 57),
-  // Color.fromARGB(255, 29, 27, 50),
-  //good
-  // Color.fromARGB(100, 42, 26, 165),
-  // Color.fromARGB(50, 245, 59, 71),
-  //to test
-  Color(0xff042b4a), Color(0xff250402),
+  Color(0xff042b4a),
+  Color(0xff250402),
 ];
 List<Color> colorsLight = const [
-  // Color.fromARGB(255, 212, 210, 219),
-  // Color.fromARGB(255, 188, 181, 209),
-  // Color.fromARGB(255, 204, 194, 232),
-  // Color.fromARGB(255, 189, 185, 242),
   Color.fromRGBO(189, 163, 141, 1),
   Color.fromRGBO(255, 246, 239, 1),
 ];

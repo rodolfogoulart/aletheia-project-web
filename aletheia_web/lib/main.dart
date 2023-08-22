@@ -88,9 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     TextStyle style = GoogleFonts.libreFranklin().copyWith(fontSize: 25);
-    // TextStyle style = GoogleFonts.cormorantUnicase().copyWith(fontSize: 25);
     var screenWidth = MediaQuery.of(context).size.width;
-    // var screenHeight = MediaQuery.of(context).size.height;
     var controllerScrollPage = ScrollController();
 
     ValueNotifier turnRow = ValueNotifier(false);
@@ -242,10 +240,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: EdgeInsets.only(left: isMobile ? 10 : 25, right: isMobile ? 10 : 25),
                               child: ValueListenableBuilder(
                                 valueListenable: body,
-                                builder: (context, value, child) {
-                                  // if (snapshot.connectionState == ConnectionState.waiting) {
-                                  //   return const Center(child: CircularProgressIndicator.adaptive());
-                                  // }
+                                builder: (context, value, child) {                                  
                                   if (body.value?.isNotEmpty == true) {
                                     //https://editorhtmlonline.clevert.com.br/html.php
                                     return Html(
@@ -323,8 +318,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             Padding(
                               padding: EdgeInsets.only(top: isMobile ? 50 : 100, bottom: 30),
-                              child: Builder(builder: (context) {
-                                var bottomStyle = style.copyWith(fontSize: style.fontSize! - 3, color: Colors.white);
+                              child: Builder(builder: (context) {                                
                                 return SizedBox(
                                   width: screenWidth,
                                   child: Column(
@@ -347,44 +341,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           }
                                           return Container();
                                         },
-                                      ),
-                                      // RichText(
-                                      //     textAlign: TextAlign.center,
-                                      //     text: TextSpan(
-                                      //       style: bottomStyle,
-                                      //       children: [
-                                      //         TextSpan(
-                                      //           text: 'I53',
-                                      //           style: bottomStyle.copyWith(fontSize: 42),
-                                      //         ),
-                                      //         const TextSpan(
-                                      //             text: '\n\nEste é um projeto de um Missionário e desenvolvedor por hobby.'),
-                                      //         const TextSpan(
-                                      //             text:
-                                      //                 '\n\nMeu anseio é que esta ferramenta seja uma benção em sua vida, que você dia a dia venha ir mais profundo na palavra,'),
-                                      //         const TextSpan(
-                                      //             text:
-                                      //                 ' \ne que a palavra de Deus venha ser falada com sabedoria e poder no Espírito Santo para que todos venham conhecer nosso Senhor Jesus Cristo.'),
-                                      //         const TextSpan(
-                                      //             text:
-                                      //                 '\n\nQue o Ide venha ser cumprido, e que Todos os Povos venham ouvir das boas novas do Reino de Deus, então finalmente encontraremos nosso Senhor.'),
-                                      //         const TextSpan(
-                                      //             text:
-                                      //                 '\n\nDeseja saber mais ou contribuir para o projeto (financeiramente e no desenvolvimento), entre em contato:\n'),
-                                      //         const TextSpan(text: 'Instagram '),
-                                      //         TextSpan(
-                                      //             text: 'rm_goulart',
-                                      //             style: style.copyWith(
-                                      //               color: Colors.blue.shade300,
-                                      //               decoration: TextDecoration.underline,
-                                      //               decorationColor: Colors.blue.shade300,
-                                      //             ),
-                                      //             recognizer: TapGestureRecognizer()
-                                      //               ..onTap = () async {
-                                      //                 await _launchUrl('https://www.instagram.com/rm_goulart/');
-                                      //               }),
-                                      //       ],
-                                      //     )),
+                                      ),                                      
                                     ],
                                   ),
                                 );
