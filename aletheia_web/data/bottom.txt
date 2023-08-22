@@ -26,6 +26,4 @@ blockquote p {
 
 <p style="text-align:center">&nbsp;</p>
 
-<h4 style="text-align:center"><em>Deseja saber mais ou contribuir para o projeto (financeiramente e/ou no desenvolvimento)?&nbsp;</em></h4>
-
-<h4 style="text-align:center"><em>Entre em contato pelo instagram: <a href="https://www.instagram.com/rm_goulart/">rm_goulart</a>&nbsp;</em></h4
+<h4 style="text-align:center"><em>Deseja saber mais ou contribuir para o projeto (financeiramente e/ou no desenvolvimento)?&nbsp;Entre em contato.</em></h4>

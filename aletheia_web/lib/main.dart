@@ -7,6 +7,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -91,7 +92,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    TextStyle style = GoogleFonts.libreFranklin().copyWith(fontSize: 25);
+    TextStyle style = GoogleFonts.libreFranklin();
     var screenWidth = MediaQuery.of(context).size.width;
     var controllerScrollPage = ScrollController();
 
@@ -246,6 +247,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     //https://editorhtmlonline.clevert.com.br/html.php
                                     return Html(
                                       data: body.value!,
+                                      style: {"html": Style.fromTextStyle(style)},
                                       onLinkTap: (url, attributes, element) async {
                                         await _launchUrl(url);
                                       },
@@ -339,6 +341,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             //https://editorhtmlonline.clevert.com.br/html.php
                                             return Html(
                                               data: value!,
+                                              style: {"html": Style.fromTextStyle(style)},
                                               onLinkTap: (url, attributes, element) async {
                                                 await _launchUrl(url);
                                               },
@@ -346,6 +349,30 @@ class _MyHomePageState extends State<MyHomePage> {
                                           }
                                           return Container();
                                         },
+                                      ),
+                                      Text('Contato', style: style),
+                                      SizedBox(
+                                        width: screenWidth,
+                                        child: Row(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            IconButton(
+                                                tooltip: 'Instagram',
+                                                onPressed: () async {
+                                                  await _launchUrl('https://www.instagram.com/rm_goulart');
+                                                },
+                                                icon: const Icon(FontAwesomeIcons.instagram)),
+                                            const SizedBox(width: 25),
+                                            IconButton(
+                                                tooltip: 'GitHub',
+                                                onPressed: () async {
+                                                  await _launchUrl('https://github.com/rodolfogoulart/aletheia-core-model');
+                                                },
+                                                icon: const Icon(FontAwesomeIcons.github)),
+                                          ],
+                                        ),
                                       ),
                                     ],
                                   ),
