@@ -12,7 +12,7 @@
 
 <p>O projeto se diferece no sentido que pode ser acessado off-line, bem como suas caracteristicas de visualiza&ccedil;&atilde;o do conte&uacute;do. H&aacute; outros softwares para estudo da B&iacute;blia mas ou s&atilde;o muito dif&iacute;ceis de acesso, ou tem uma interface confusa pra uso, ou n&atilde;o tem para diferentes plataformas, bem como tamb&eacute;m utilizam de linguagens legadas para desenvolvimento, o que faz com que tenham pouca manuten&ccedil;&atilde;o ou nenhuma.</p>
 
-<h2>Funcionalidas</h2>
+<h2>Funcionalidades</h2>
 
 <ul>
 	<li>
