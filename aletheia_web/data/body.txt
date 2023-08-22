@@ -1,25 +1,56 @@
 <h1>O que &eacute; o Projeto Aletheia?</h1>
 
-<p>Projeto Aletheia &eacute; um software para <strong>estudo da B&iacute;blia</strong> de forma mais aprofundada e
-    simples.</p>
+<p>Projeto Aletheia &eacute; um software para <strong>estudo da B&iacute;blia</strong> de forma mais aprofundada e simples.</p>
 
-<p>Como&nbsp;<strong>Crist&atilde;o&nbsp;<em>Protestante</em></strong>, temos como objetivo ampliar a oportunidade de
-    que pessoas simples venham ter uma ferramenta usual para estudo da biblia de forma mais simples e profunda.</p>
+<p>Como&nbsp;<strong>Crist&atilde;o&nbsp;<em>Protestante</em></strong>, temos como objetivo ampliar a oportunidade de que pessoas simples venham ter uma ferramenta usual para estudo da biblia de forma mais simples e profunda.</p>
 
 <h2>Onde posso encontrar o projeto?</h2>
 
-<p>O projeto pode ser baixado no link <a
-        href="https://github.com/rodolfogoulart/aletheia-core-model/releases">Aletheia-setup</a>. Para baixar veja a
-    ultima vers&atilde;o dispon&iacute;vel e click em <u><strong>Aletheia-setup.exe.</strong></u>&nbsp;A
-    instala&ccedil;&atilde;o &eacute; simples e j&aacute; contem uma base de dados em Portugues-Brazil para
-    utiliza&ccedil;&atilde;o do software.</p>
+<p>O projeto pode ser baixado no link <a href="https://github.com/rodolfogoulart/aletheia-core-model/releases">Aletheia-setup</a>. Para baixar veja a ultima vers&atilde;o dispon&iacute;vel e click em <u><strong>Aletheia-setup.exe.</strong></u>&nbsp;A instala&ccedil;&atilde;o &eacute; simples e j&aacute; contem uma base de dados em Portugues-Brazil para utiliza&ccedil;&atilde;o do software.</p>
 
 <h2>O que difere o projeto de outros?</h2>
 
-<p>O projeto se diferece no sentido que pode ser acessado off-line, bem como suas caracteristicas de
-    visualiza&ccedil;&atilde;o do conte&uacute;do. H&aacute; outros softwares para estudo da B&iacute;blia mas ou
-    s&atilde;o muito dif&iacute;ceis de acesso, ou tem uma interface confusa pra uso, ou n&atilde;o tem para diferentes
-    plataformas, bem como tamb&eacute;m utilizam de linguagens legadas para desenvolvimento, o que faz com que tenham
-    pouca manuten&ccedil;&atilde;o ou nenhuma.</p>
+<p>O projeto se diferece no sentido que pode ser acessado off-line, bem como suas caracteristicas de visualiza&ccedil;&atilde;o do conte&uacute;do. H&aacute; outros softwares para estudo da B&iacute;blia mas ou s&atilde;o muito dif&iacute;ceis de acesso, ou tem uma interface confusa pra uso, ou n&atilde;o tem para diferentes plataformas, bem como tamb&eacute;m utilizam de linguagens legadas para desenvolvimento, o que faz com que tenham pouca manuten&ccedil;&atilde;o ou nenhuma.</p>
 
-<p>&nbsp;</p>
+<h2>Funcionalidas</h2>
+
+<ul>
+	<li><strong>Diferentes vers&otilde;es b&iacute;blicas</strong>.</li>
+	<li><strong>Compara&ccedil;&atilde;o Verso ao Verso</strong> em diferentes vers&otilde;es.</li>
+	<li><code>​​​​​​</code><strong>Refer&ecirc;ncia b&iacute;blica </strong>Verso a Verso.</li>
+	<li><strong>Anota&ccedil;&otilde;es </strong>pessoais no verso.
+	<ul>
+		<li>&Uacute;til para prepara&ccedil;&atilde;o de estudo e coment&aacute;rios pessoais.</li>
+	</ul>
+	</li>
+	<li><strong>Dicion&aacute;rio de palavras</strong>.
+	<ul>
+		<li>V&aacute;rios dicion&aacute;rios b&iacute;blicos para comparar significado.</li>
+	</ul>
+	</li>
+	<li><strong>Coment&aacute;rio b&iacute;blico</strong>.
+	<ul>
+		<li>Linkado ao cap&iacute;tulo ou verso.</li>
+	</ul>
+	</li>
+	<li><strong>Impress&atilde;o </strong>do cap&iacute;tulo com coment&aacute;rios pessoais.</li>
+	<li><strong>Leitura de pdf</strong>
+	<ul>
+		<li>&Uacute;til para leitura de coment&aacute;rios e utiliza&ccedil;&atilde;o de outras ferramentas.</li>
+	</ul>
+	</li>
+	<li><strong>Dicion&aacute;rio L&eacute;xico </strong>
+	<ul>
+		<li><em><strong>***</strong>Depende da vers&atilde;o, se possui referencia ao L&eacute;xico</em></li>
+		<li>&Uacute;til para exegese b&iacute;blica</li>
+	</ul>
+	</li>
+	<li>Experimental
+	<ul>
+		<li>Contexto b&iacute;blico e exegese b&iacute;blica utilizando Chat-GPT (Precisa de configura&ccedil;&atilde;o de uma chave de acesso)</li>
+		<li>NLP (Processamento de Linguagem Natural)&nbsp; Google Cloud (Precisa de configura&ccedil;&atilde;o de uma chave de acesso)</li>
+	</ul>
+	</li>
+	<li><strong>Marca&ccedil;&atilde;o de Verso</strong></li>
+	<li><strong><u>Base de dados off-line</u></strong></li>
+</ul>
