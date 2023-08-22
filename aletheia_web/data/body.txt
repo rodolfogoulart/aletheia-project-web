@@ -15,42 +15,82 @@
 <h2>Funcionalidas</h2>
 
 <ul>
-	<li><strong>Diferentes vers&otilde;es b&iacute;blicas</strong>.</li>
-	<li><strong>Compara&ccedil;&atilde;o Verso ao Verso</strong> em diferentes vers&otilde;es.</li>
-	<li><code>​​​​​​</code><strong>Refer&ecirc;ncia b&iacute;blica </strong>Verso a Verso.</li>
-	<li><strong>Anota&ccedil;&otilde;es </strong>pessoais no verso.
+	<li>
+	<p><strong>Diferentes vers&otilde;es b&iacute;blicas</strong>.</p>
+	</li>
+	<li>
+	<p><strong>Compara&ccedil;&atilde;o Verso ao Verso</strong> em diferentes vers&otilde;es.</p>
+	</li>
+	<li>
+	<p><code>​​​​​​</code><strong>Refer&ecirc;ncia b&iacute;blica </strong>Verso a Verso.</p>
+	</li>
+	<li>
+	<p><strong>Anota&ccedil;&otilde;es </strong>pessoais no verso.</p>
+
 	<ul>
-		<li>&Uacute;til para prepara&ccedil;&atilde;o de estudo e coment&aacute;rios pessoais.</li>
+		<li>
+		<p>&Uacute;til para prepara&ccedil;&atilde;o de estudo e coment&aacute;rios pessoais.</p>
+		</li>
 	</ul>
 	</li>
-	<li><strong>Dicion&aacute;rio de palavras</strong>.
+	<li>
+	<p><strong>Dicion&aacute;rio de palavras</strong>.</p>
+
 	<ul>
-		<li>V&aacute;rios dicion&aacute;rios b&iacute;blicos para comparar significado.</li>
+		<li>
+		<p>V&aacute;rios dicion&aacute;rios b&iacute;blicos para comparar significado.</p>
+		</li>
 	</ul>
 	</li>
-	<li><strong>Coment&aacute;rio b&iacute;blico</strong>.
+	<li>
+	<p><strong>Coment&aacute;rio b&iacute;blico</strong>.</p>
+
 	<ul>
-		<li>Linkado ao cap&iacute;tulo ou verso.</li>
+		<li>
+		<p>Linkado ao cap&iacute;tulo ou verso.</p>
+		</li>
 	</ul>
 	</li>
-	<li><strong>Impress&atilde;o </strong>do cap&iacute;tulo com coment&aacute;rios pessoais.</li>
-	<li><strong>Leitura de pdf</strong>
+	<li>
+	<p><strong>Impress&atilde;o </strong>do cap&iacute;tulo com coment&aacute;rios pessoais.</p>
+	</li>
+	<li>
+	<p><strong>Leitura de pdf</strong></p>
+
 	<ul>
-		<li>&Uacute;til para leitura de coment&aacute;rios e utiliza&ccedil;&atilde;o de outras ferramentas.</li>
+		<li>
+		<p>&Uacute;til para leitura de coment&aacute;rios e utiliza&ccedil;&atilde;o de outras ferramentas.</p>
+		</li>
 	</ul>
 	</li>
-	<li><strong>Dicion&aacute;rio L&eacute;xico </strong>
+	<li>
+	<p><strong>Dicion&aacute;rio L&eacute;xico </strong></p>
+
 	<ul>
-		<li><em><strong>***</strong>Depende da vers&atilde;o, se possui referencia ao L&eacute;xico</em></li>
-		<li>&Uacute;til para exegese b&iacute;blica</li>
+		<li>
+		<p><em><strong>***</strong>Depende da vers&atilde;o, se possui referencia ao L&eacute;xico</em></p>
+		</li>
+		<li>
+		<p>&Uacute;til para exegese b&iacute;blica</p>
+		</li>
 	</ul>
 	</li>
-	<li>Experimental
+	<li>
+	<p>Experimental</p>
+
 	<ul>
-		<li>Contexto b&iacute;blico e exegese b&iacute;blica utilizando Chat-GPT (Precisa de configura&ccedil;&atilde;o de uma chave de acesso)</li>
-		<li>NLP (Processamento de Linguagem Natural)&nbsp; Google Cloud (Precisa de configura&ccedil;&atilde;o de uma chave de acesso)</li>
+		<li>
+		<p>Contexto b&iacute;blico e exegese b&iacute;blica utilizando Chat-GPT (Precisa de configura&ccedil;&atilde;o de uma chave de acesso)</p>
+		</li>
+		<li>
+		<p>NLP (Processamento de Linguagem Natural)&nbsp; Google Cloud (Precisa de configura&ccedil;&atilde;o de uma chave de acesso)</p>
+		</li>
 	</ul>
 	</li>
-	<li><strong>Marca&ccedil;&atilde;o de Verso</strong></li>
-	<li><strong><u>Base de dados off-line</u></strong></li>
+	<li>
+	<p><strong>Marca&ccedil;&atilde;o de Verso</strong></p>
+	</li>
+	<li>
+	<p><strong><u>Base de dados off-line</u></strong></p>
+	</li>
 </ul>
