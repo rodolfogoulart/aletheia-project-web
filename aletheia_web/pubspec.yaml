@@ -17,6 +17,8 @@ dependencies:
   google_fonts: ^5.1.0  
   flutter_animate: ^4.2.0+1
   url_launcher: ^6.1.12
+  flutter_html: ^3.0.0-beta.2
+  http: ^1.1.0
 
 dev_dependencies:
   flutter_test:
