@@ -1,3 +1,7 @@
+import 'dart:math';
+import 'dart:ui';
+
+import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -174,33 +178,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                     Widget image = Image.asset('assets/images/aletheia-icon.png',
                         fit: BoxFit.scaleDown, width: isMobile ? 42 : 128, height: isMobile ? 42 : 128);
-                    // .animate(
-                    //   delay: 2.seconds,
-                    //   onComplete: (controller) {
-                    //     controller.repeat(period: 3.seconds);
-                    //   },
-                    // )
-                    // .shimmer(duration: 3.seconds, delay: 2.seconds);
 
                     return turnRow.value
-                        ? Builder(builder: (context) {
-                            var widget = Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 8.0),
-                                  child: image,
-                                ),
-                                text
-                              ],
-                            ).animate().fade(duration: 300.milliseconds);
-                            if (isMobile) {
-                              return FittedBox(child: widget);
-                            }
-                            return widget;
-                          })
+                        ? RepaintBoundary(
+                            child: Builder(builder: (context) {
+                              var widget = Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: image,
+                                  ),
+                                  text
+                                ],
+                              ).animate().fade(duration: 300.milliseconds);
+                              if (isMobile) {
+                                return FittedBox(child: widget);
+                              }
+                              return widget;
+                            }),
+                          )
                         : Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -210,13 +209,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   }),
             ),
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 25),
-                child: ValueListenableBuilder(
-                    valueListenable: isLoading,
-                    builder: (context, value, child) {
-                      if (isLoading.value) {
-                        return Center(
+              child: ValueListenableBuilder(
+                  valueListenable: isLoading,
+                  builder: (context, value, child) {
+                    if (isLoading.value) {
+                      return RepaintBoundary(
+                        child: Center(
                                 child: Text('Carregando...', style: style)
                                     .animate(
                                       delay: 2.seconds,
@@ -226,10 +224,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     )
                                     .shimmer(duration: 3.seconds, delay: 2.seconds))
                             .animate()
-                            .fade();
-                      }
+                            .fade(),
+                      );
+                    }
 
-                      return SingleChildScrollView(
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 25),
+                      child: SingleChildScrollView(
                         controller: controllerScrollPage,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -240,7 +241,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: EdgeInsets.only(left: isMobile ? 10 : 25, right: isMobile ? 10 : 25),
                               child: ValueListenableBuilder(
                                 valueListenable: body,
-                                builder: (context, value, child) {                                  
+                                builder: (context, value, child) {
                                   if (body.value?.isNotEmpty == true) {
                                     //https://editorhtmlonline.clevert.com.br/html.php
                                     return Html(
@@ -262,15 +263,17 @@ class _MyHomePageState extends State<MyHomePage> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.only(right: isMobile ? 4 : 8),
-                                      child: IconButton(
-                                          onPressed: () async {
-                                            await controllerScroll.animateTo(controllerScroll.offset - 250,
-                                                duration: 200.milliseconds, curve: Curves.bounceInOut);
-                                          },
-                                          icon: const Icon(
-                                            Icons.arrow_back,
-                                            size: 35,
-                                          )).animate().fade(),
+                                      child: RepaintBoundary(
+                                        child: IconButton(
+                                            onPressed: () async {
+                                              await controllerScroll.animateTo(controllerScroll.offset - 250,
+                                                  duration: 200.milliseconds, curve: Curves.bounceInOut);
+                                            },
+                                            icon: const Icon(
+                                              Icons.arrow_back,
+                                              size: 35,
+                                            )).animate().fade(),
+                                      ),
                                     ),
                                     Expanded(
                                       child: SingleChildScrollView(
@@ -302,15 +305,17 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: isMobile ? 4 : 8),
-                                      child: IconButton(
-                                          onPressed: () async {
-                                            await controllerScroll.animateTo(controllerScroll.offset + 250,
-                                                duration: 200.milliseconds, curve: Curves.bounceInOut);
-                                          },
-                                          icon: const Icon(
-                                            Icons.arrow_forward,
-                                            size: 35,
-                                          )).animate().fade(),
+                                      child: RepaintBoundary(
+                                        child: IconButton(
+                                            onPressed: () async {
+                                              await controllerScroll.animateTo(controllerScroll.offset + 250,
+                                                  duration: 200.milliseconds, curve: Curves.bounceInOut);
+                                            },
+                                            icon: const Icon(
+                                              Icons.arrow_forward,
+                                              size: 35,
+                                            )).animate().fade(),
+                                      ),
                                     ),
                                   ],
                                 );
@@ -318,7 +323,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             Padding(
                               padding: EdgeInsets.only(top: isMobile ? 50 : 100, bottom: 30),
-                              child: Builder(builder: (context) {                                
+                              child: Builder(builder: (context) {
                                 return SizedBox(
                                   width: screenWidth,
                                   child: Column(
@@ -341,7 +346,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           }
                                           return Container();
                                         },
-                                      ),                                      
+                                      ),
                                     ],
                                   ),
                                 );
@@ -349,9 +354,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ],
                         ),
-                      );
-                    }),
-              ),
+                      ),
+                    );
+                  }),
             ),
           ],
         ),
@@ -378,81 +383,49 @@ class CardImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
-    var screenHeight = MediaQuery.of(context).size.height;
+    // var screenHeight = MediaQuery.of(context).size.height;
     bool isMobile = screenWidth < 400;
 
-    return SizedBox(
-      width: isMobile ? screenWidth * .6 : 512,
-      child: Card(
-        elevation: 1,
-        child: Column(
-          children: [
-            GestureDetector(
-              onTap: () async {
-                await showDialog(
-                    context: context,
-                    builder: (_) {
-                      return AlertDialog(
-                        // title:
-                        elevation: 0,
-                        backgroundColor: Colors.transparent,
-                        insetPadding: EdgeInsets.zero,
-                        shape: const RoundedRectangleBorder(),
-                        content: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                IconButton(
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                    icon: Icon(
-                                      Icons.arrow_back,
-                                      size: isMobile ? null : 35,
-                                    )),
-                              ],
-                            ),
-                            SizedBox(
-                              width: isMobile ? screenWidth : screenWidth * .75,
-                              height: isMobile ? null : screenHeight * .75,
-                              child: asset
-                                  ? Image.asset(
-                                      image,
-                                      fit: BoxFit.fitWidth,
-                                      width: isMobile ? screenWidth : 512,
-                                    )
-                                  : Image.network(
-                                      image,
-                                      fit: BoxFit.fitWidth,
-                                      width: isMobile ? screenWidth : 512,
-                                    ),
-                            ),
-                          ],
-                        ),
-                      );
-                    });
-              },
-              child: Image.asset(
-                image,
-                fit: BoxFit.scaleDown,
+    return RepaintBoundary(
+      child: SizedBox(
+        width: isMobile ? screenWidth * .6 : 512,
+        child: Card(
+          elevation: 1,
+          child: Column(
+            children: [
+              GestureDetector(
+                onTap: () async {
+                  final imageProvider = (asset
+                          ? Image.asset(
+                              image,
+                              fit: BoxFit.fitWidth,
+                              width: isMobile ? screenWidth : 512,
+                            )
+                          : Image.network(
+                              image,
+                              fit: BoxFit.fitWidth,
+                              width: isMobile ? screenWidth : 512,
+                            ))
+                      .image;
+                  await showImageViewer(context, imageProvider,
+                      doubleTapZoomable: true, swipeDismissible: true, useSafeArea: true);
+                },
+                child: Image.asset(
+                  image,
+                  fit: BoxFit.scaleDown,
+                ),
               ),
-            ),
-            ListTile(
-              title: Text(
-                title,
-                style: style,
-              ),
-              subtitle: subtitle != null ? Text(subtitle ?? '', style: style) : null,
-            )
-          ],
+              ListTile(
+                title: Text(
+                  title,
+                  style: style,
+                ),
+                subtitle: subtitle != null ? Text(subtitle ?? '', style: style) : null,
+              )
+            ],
+          ),
         ),
-      ),
-    ).animate().fade();
+      ).animate().fade(),
+    );
   }
 }
