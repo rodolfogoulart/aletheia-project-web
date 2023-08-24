@@ -1,20 +1,17 @@
-<h1>O que &eacute; o Projeto Aletheia?</h1>
+<h1>A B&iacute;blia de Estudo Digital</h1>
 
-<p>Projeto Aletheia &eacute; um software para <strong>estudo da B&iacute;blia</strong> de forma mais aprofundada e simples.</p>
+<hr />
+<h2>Projeto Aletheia &eacute; um software para <strong>estudo da B&iacute;blia</strong> de forma mais aprofundada e simples no seu PC/Tablet.</h2>
 
-<p>Como&nbsp;<strong>Crist&atilde;o&nbsp;<em>Protestante</em></strong>, temos como objetivo ampliar a oportunidade de que pessoas simples venham ter uma ferramenta usual para estudo da biblia de forma mais simples e profunda.</p>
-
+<p>O anseio &eacute; que esta seja uma ferramento que possa ampliar a oportunidade de que qualquer um venha&nbsp;ter em m&atilde;os uma ferramenta simples por&eacute;m completa para estudo da b&iacute;blia de forma mais profunda.</p>
+<br>
 <h2>Onde posso encontrar o projeto?</h2>
 
 <p>O App pode ser baixado na pagina de desenvolvimento 
 <buttonwindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases">Download</buttonwindows>
 <br><br>Para baixar veja a ultima vers&atilde;o dispon&iacute;vel e click em <u><strong>Aletheia-setup.exe.</strong></u>&nbsp;A instala&ccedil;&atilde;o &eacute; simples e j&aacute; contem uma base de dados em Portugues-Brazil para utiliza&ccedil;&atilde;o do software.</p>
-
-
-<h2>O que difere o projeto de outros?</h2>
-
-<p>O projeto se diferece no sentido que pode ser acessado off-line, bem como suas caracteristicas de visualiza&ccedil;&atilde;o do conte&uacute;do. H&aacute; outros softwares para estudo da B&iacute;blia mas ou s&atilde;o muito dif&iacute;ceis de acesso, ou tem uma interface confusa pra uso, ou n&atilde;o tem para diferentes plataformas, bem como tamb&eacute;m utilizam de linguagens legadas para desenvolvimento, o que faz com que tenham pouca manuten&ccedil;&atilde;o ou nenhuma.</p>
-
+<br>
+<br>
 <h2>Funcionalidades</h2>
 
 <ul>
@@ -97,3 +94,9 @@
 	<p><strong><u>Base de dados off-line</u></strong></p>
 	</li>
 </ul>
+
+<br>
+<br>
+<h2>O que difere o projeto de outros?</h2>
+
+<p>O projeto se diferece no sentido que pode ser acessado off-line, bem como suas caracteristicas de visualiza&ccedil;&atilde;o do conte&uacute;do. H&aacute; outros softwares para estudo da B&iacute;blia mas ou s&atilde;o muito dif&iacute;ceis de acesso, ou tem uma interface confusa pra uso, ou n&atilde;o tem para diferentes plataformas, bem como tamb&eacute;m utilizam de linguagens legadas para desenvolvimento, o que faz com que tenham pouca manuten&ccedil;&atilde;o ou nenhuma.</p>
