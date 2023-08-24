@@ -1,9 +1,7 @@
-import 'dart:math';
 import 'dart:ui';
 
 import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_html/flutter_html.dart';
@@ -247,7 +245,38 @@ class _MyHomePageState extends State<MyHomePage> {
                                     //https://editorhtmlonline.clevert.com.br/html.php
                                     return Html(
                                       data: body.value!,
-                                      style: {"html": Style.fromTextStyle(style)},
+                                      extensions: [
+                                        TagExtension(
+                                          tagsToExtend: {'buttonwindows'},
+                                          builder: (e) {
+                                            return ElevatedButton(
+                                                onPressed: () async {
+                                                  await _launchUrl(e.attributes['href']);
+                                                },
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    const Icon(FontAwesomeIcons.windows),
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(left: 4),
+                                                      child: Text(
+                                                        e.innerHtml,
+                                                        style: style,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ));
+                                          },
+                                        )
+                                      ],
+                                      style: {
+                                        "html": Style.fromTextStyle(style),
+                                        // "button": Style(
+                                        //   backgroundColor: Colors.red,
+                                        //   display: Display.inline,
+                                        //   color: Colors.white,
+                                        // )
+                                      },
                                       onLinkTap: (url, attributes, element) async {
                                         await _launchUrl(url);
                                       },
@@ -257,6 +286,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 },
                               ),
                             ),
+                            //cards
                             Padding(
                               padding: const EdgeInsets.only(top: 50, bottom: 50),
                               child: Builder(builder: (context) {
