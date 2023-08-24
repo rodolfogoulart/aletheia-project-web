@@ -14,7 +14,10 @@
 
 <h2>Onde posso encontrar o projeto?</h2>
 
-<p>O App pode ser baixado na pagina de desenvolvimento <a href="https://github.com/rodolfogoulart/aletheia-core-model/releases"><button>Download</button></a> <br>Para baixar veja a ultima vers&atilde;o dispon&iacute;vel e click em <u><strong>Aletheia-setup.exe.</strong></u>&nbsp;A instala&ccedil;&atilde;o &eacute; simples e j&aacute; contem uma base de dados em Portugues-Brazil para utiliza&ccedil;&atilde;o do software.</p>
+<p>O App pode ser baixado na pagina de desenvolvimento 
+<buttonWindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases">Download</buttonWindows>
+<a href="https://github.com/rodolfogoulart/aletheia-core-model/releases">Download</a> 
+<br>Para baixar veja a ultima vers&atilde;o dispon&iacute;vel e click em <u><strong>Aletheia-setup.exe.</strong></u>&nbsp;A instala&ccedil;&atilde;o &eacute; simples e j&aacute; contem uma base de dados em Portugues-Brazil para utiliza&ccedil;&atilde;o do software.</p>
 
 
 <h2>O que difere o projeto de outros?</h2>
