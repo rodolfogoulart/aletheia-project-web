@@ -19,9 +19,9 @@ blockquote p {
 <blockquote>
 <h1 style="text-align:center">I53</h1>
 
-<h3 style="text-align:center">Este &eacute; um projeto de um Mission&aacute;rio e desenvolvedor por hobby.</h3>
+<h3 style="text-align:center">Este &eacute; um projeto crist&atilde;o de um Mission&aacute;rio e desenvolvedor por hobby, apaixonado por Jesus Cristo e pela palavra das boas novas.</h3>
 
-<p style="text-align:center">Meu anseio &eacute; que esta ferramenta seja uma ben&ccedil;&atilde;o em sua vida, que voc&ecirc; dia a dia venha ir mais profundo na palavra, e que a palavra de Deus venha ser falada com sabedoria e poder no Esp&iacute;rito Santo para que todos venham conhecer nosso Senhor Jesus Cristo,&nbsp;que o Ide venha ser cumprido, e que Todos os Povos venham ouvir das boas novas do Reino de Deus, ent&atilde;o finalmente encontraremos nosso Senhor.</p>
+<p style="text-align:center">Meu anseio &eacute; que esta ferramenta seja uma ben&ccedil;&atilde;o em sua vida, que voc&ecirc; dia a dia venha ir mais profundo na palavra, e que a palavra de Deus venha ser falada com <u>sabedoria</u> e <u>poder no Esp&iacute;rito Santo </u>para que todos venham conhecer nosso Senhor Jesus Cristo,&nbsp;que o Ide venha ser cumprido, e que Todos os Povos venham ouvir desta maravilhosa boas novas do Reino de Deus, ent&atilde;o finalmente encontraremos nosso Senhor.</p>
 </blockquote>
 
 <p style="text-align:center">&nbsp;</p>
