@@ -12,3 +12,10 @@ body Extensions
     <buttonwindows> tag to create a button with the log of Windows. Used to create a link button
 
 bottom Extensions
+
+
+## Build
+    flutter build web --web-renderer html
+
+## Deploy
+    firebase deploy

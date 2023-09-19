@@ -267,7 +267,73 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   ],
                                                 ));
                                           },
-                                        )
+                                        ),
+                                        TagExtension(
+                                          tagsToExtend: {'buttonmacos'},
+                                          builder: (e) {
+                                            return ElevatedButton(
+                                                onPressed: () async {
+                                                  await _launchUrl(e.attributes['href']);
+                                                },
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    const Icon(FontAwesomeIcons.apple),
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(left: 4),
+                                                      child: Text(
+                                                        e.innerHtml,
+                                                        style: style,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ));
+                                          },
+                                        ),
+                                        TagExtension(
+                                          tagsToExtend: {'buttonlinux'},
+                                          builder: (e) {
+                                            return ElevatedButton(
+                                                onPressed: () async {
+                                                  await _launchUrl(e.attributes['href']);
+                                                },
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    const Icon(FontAwesomeIcons.linux),
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(left: 4),
+                                                      child: Text(
+                                                        e.innerHtml,
+                                                        style: style,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ));
+                                          },
+                                        ),
+                                        TagExtension(
+                                          tagsToExtend: {'buttongithub'},
+                                          builder: (e) {
+                                            return ElevatedButton(
+                                                onPressed: () async {
+                                                  await _launchUrl(e.attributes['href']);
+                                                },
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    const Icon(FontAwesomeIcons.github),
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(left: 4),
+                                                      child: Text(
+                                                        e.innerHtml,
+                                                        style: style,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ));
+                                          },
+                                        ),
                                       ],
                                       style: {
                                         "html": Style.fromTextStyle(style),
