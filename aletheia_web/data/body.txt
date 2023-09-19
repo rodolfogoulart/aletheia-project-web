@@ -15,6 +15,7 @@
 <br><p>***Para instalar, clicar com direito e executar arquivo
 <br>
 <p>Pagina de desenvolvimento
+<br>
 <buttongithub href="https://github.com/rodolfogoulart/aletheia-core-model/releases">GitHub Releases</buttongithub>
 <br><br>Para baixar veja a ultima vers&atilde;o dispon&iacute;vel e click em <u><strong>Aletheia-setup.exe.</strong></u>&nbsp;A instala&ccedil;&atilde;o &eacute; simples e j&aacute; contem uma base de dados em Portugues-Brazil para utiliza&ccedil;&atilde;o do software.</p>
 <br>
