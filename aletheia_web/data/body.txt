@@ -8,8 +8,9 @@
 <h2>Onde posso encontrar o projeto?</h2>
 
 <p>O App pode ser baixado para
-<buttonwindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia-setup.exe">Windows</buttonwindows>
 <br>
+<buttonwindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia-setup.exe">Windows</buttonwindows>
+<p> | 
 <buttonmacos href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia.pkg">Mac OS</buttonmacos>
 <br><p>***Para instalar, clicar com direito e executar arquivo
 <br>
