@@ -7,9 +7,15 @@
 <br>
 <h2>Onde posso encontrar o projeto?</h2>
 
-<p>O App pode ser baixado para
+<p>O App pode ser baixado para Mac Os e Windows
 <br>
-<buttonwindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia-setup.exe">Windows</buttonwindows>
+<buttonwindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia-setup.exe">Windows Setup</buttonwindows>
+<br>
+<p>Loja do Windows
+<br>
+<buttonwindows href="https://apps.microsoft.com/?hl=pt-br&gl=BR&rtc=1">Windows Store</buttonwindows>
+<br>
+<p>Versão para Mac Os ***(para instalar, baixe arquivo e click com direito e em "Abrir"
 <br>
 <buttonmacos href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia.pkg">Mac OS</buttonmacos>
 <br><p>***Para instalar, clicar com direito e executar arquivo
