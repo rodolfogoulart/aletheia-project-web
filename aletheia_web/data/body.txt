@@ -13,7 +13,7 @@
 <br>
 <p>Loja do Windows
 <br>
-<buttonwindows href="https://apps.microsoft.com/?hl=pt-br&gl=BR&rtc=1">Windows Store</buttonwindows>
+<buttonwindows href="https://apps.microsoft.com/store/detail/biblia-aletheia/9NC9ZG5799G3?hl=pt-br&gl=br&rtc=1">Windows Store</buttonwindows>
 <br>
 <p>Versão para Mac Os <br>***(para instalar, baixe arquivo e click com direito e em "Abrir"
 <br>

@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:aletheia_web/policy.page.dart';
+import 'package:aletheia_web/term.page.dart';
 import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
@@ -45,17 +47,25 @@ class MyApp extends StatelessWidget {
       ).copyWith(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff042b4a), brightness: Brightness.dark),
       ),
-      home: FutureBuilder(
-        future: requestAllData(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            isLoading.value = true;
-          } else {
-            isLoading.value = false;
-          }
-          return const MyHomePage(title: 'Aletheia');
+      routes: {
+        '/': (context) => FutureBuilder(
+              future: requestAllData(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  isLoading.value = true;
+                } else {
+                  isLoading.value = false;
+                }
+                return const MyHomePage(title: 'Aletheia');
+              },
+            ),
+        '/policy': (context) {
+          return const PagePolicy();
         },
-      ),
+        '/term': (context) {
+          return const PageTerm();
+        }
+      },
       scrollBehavior: MyCustomScrollBehavior(),
     );
   }
