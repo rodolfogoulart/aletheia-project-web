@@ -1,25 +1,25 @@
 <h1>A B&iacute;blia de Estudo Digital</h1>
 
 <hr />
-<h2>Projeto Aletheia &eacute; um software para <strong>estudo da B&iacute;blia</strong> de forma mais aprofundada e simples no seu PC/Tablet.</h2>
+<h2>Projeto Aletheia &eacute; um software para <strong>estudo da B&iacute;blia</strong> de forma mais aprofundada e simples no seu PC.</h2>
 
 <p>O anseio &eacute; que esta seja uma ferramento que possa ampliar a oportunidade de que qualquer um venha&nbsp;ter em m&atilde;os uma ferramenta simples por&eacute;m completa para estudo da b&iacute;blia de forma mais profunda.</p>
 <br>
 <h2>Onde posso encontrar o projeto?</h2>
 
-<p>O App pode ser baixado para Mac Os e Windows
+<p>O App pode ser baixado para <strong>Mac Os</strong> e <strong>Windows</strong>
 <br>
 <p>Loja do Windows
 <br>
 <buttonwindows href="https://apps.microsoft.com/store/detail/biblia-aletheia/9NC9ZG5799G3?hl=pt-br&gl=br&rtc=1">Windows Store</buttonwindows>
 <br>
 <p>Instalador próprio
-<buttonwindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia-setup.exe">Windows Setup</buttonwindows>
+<buttonwindows href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.5/Aletheia-setup.exe">Windows Setup</buttonwindows>
 <br>
 <br>
 <p>Versão para Mac Os <br>***(para instalar, baixe arquivo e click com direito e em "Abrir"
 <br>
-<buttonmacos href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.2/Aletheia.pkg">Mac OS</buttonmacos>
+<buttonmacos href="https://github.com/rodolfogoulart/aletheia-core-model/releases/download/v1.0.5/Aletheia.pkg">Mac OS</buttonmacos>
 <br>
 <br>
 <p>Pagina de desenvolvimento
